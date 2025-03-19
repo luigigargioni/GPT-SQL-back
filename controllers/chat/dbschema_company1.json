@@ -1,0 +1,182 @@
+{
+    "articologiacenzestockout": {
+        "Description": "Tabella per reperire i dati relativi alle giacenze e agli stockout degli articoli",
+        "Fields": [
+            {
+                "Name": "reparto",
+                "Type": "VARCHAR(50)",
+                "Description": "Nome del reparto ospedaliero"
+            },
+            {
+                "Name": "articolodescrizione",
+                "Type": "VARCHAR(100)",
+                "Description": "Nome dell'articolo"
+            },
+            {
+                "Name": "articoloprincipioattivo",
+                "Type": "VARCHAR(100)",
+                "Description": "Principio attivo dell'articolo"
+            },
+            {
+                "Name": "articoloclasseterapeutica",
+                "Type": "VARCHAR(100)",
+                "Description": "Classe terapeutica dell'articolo"
+            },
+            {
+                "Name": "articoloforma",
+                "Type": "VARCHAR(50)",
+                "Description": "Forma farmaceutica dell'articolo"
+            },
+            {
+                "Name": "giacenzelotto",
+                "Type": "VARCHAR(20)",
+                "Description": "Lotto dell'articolo"
+            },
+            {
+                "Name": "giacenzescadenza",
+                "Type": "DATE",
+                "Description": "Data di scadenza dell'articolo"
+            },
+            {
+                "Name": "giacenzequantita",
+                "Type": "INT",
+                "Description": "Quantità dell'articolo espresso in unità di misura"
+            },
+            {
+                "Name": "stockoutscorta",
+                "Type": "BOOLEAN",
+                "Description": "Flag che indica se l'articolo  ha una scorta minima"
+            },
+            {
+                "Name": "timestamp",
+                "Type": "DATE",
+                "Description": "Data e ora dell'ultimo aggiornamento"
+            }
+        ]
+    },
+    "recall": {
+        "Description": "Tabelle per reperire i dati relativi dei recall degli articoli, cioè i ritiri di articoli dal mercato per problemi di sicurezza o qualità",
+        "Fields": [
+            {
+                "Name": "idrecall",
+                "Type": "INT",
+                "Description": "Identificativo del recall"
+            },
+            {
+                "Name": "lotto",
+                "Type": "VARCHAR(20)",
+                "Description": "Lotto dell'articolo"
+            },
+            {
+                "Name": "datarecall",
+                "Type": "DATE",
+                "Description": "Data del recall"
+            },
+            {
+                "Name": "articolodescrizione",
+                "Type": "VARCHAR(100)",
+                "Description": "Nome dell'articolo"
+            },
+            {
+                "Name": "articoloprincipioattivo",
+                "Type": "VARCHAR(100)",
+                "Description": "Principio attivo dell'articolo"
+            },
+            {
+                "Name": "articoloclasseterapeutica",
+                "Type": "VARCHAR(100)",
+                "Description": "Classe terapeutica dell'articolo"
+            },
+            {
+                "Name": "articoloforma",
+                "Type": "VARCHAR(50)",
+                "Description": "Forma farmaceutica dell'articolo"
+            },
+            {
+                "Name": "giacenzelotto",
+                "Type": "VARCHAR(20)",
+                "Description": "Lotto dell'articolo"
+            },
+            {
+                "Name": "timestamp",
+                "Type": "DATE",
+                "Description": "Data e ora dell'ultimo aggiornamento"
+            }
+        ]
+    },
+    "ordini": {
+        "Description": "Tabella per reperire i dati relativi agli ordini dei farmaci, cioè i dati relativi ai farmaci ordinati dai reparti ospedalieri",
+        "Fields": [
+            {
+                "Name": "reparto",
+                "Type": "VARCHAR(50)",
+                "Description": "Nome del reparto ospedaliero"
+            },
+            {
+                "Name": "numeroordine",
+                "Type": "INT",
+                "Description": "Numero dell'ordine"
+            },
+            {
+                "Name": "urgente",
+                "Type": "BOOLEAN",
+                "Description": "Flag che indica se l'ordine è urgente"
+            },
+            {
+                "Name": "esitovalidazione",
+                "Type": "BOOLEAN",
+                "Description": "Flag che indica se l'ordine è stato validato. Se null l'ordine è in attesa di validazione, se false l'ordine è stato rifiutato, se true l'ordine è stato accettato"
+            },
+            {
+                "Name": "datetimevalidazione",
+                "Type": "TIMESTAMP",
+                "Description": "Data e ora della validazione dell'ordine"
+            },
+            {
+                "Name": "datetimeprocessed",
+                "Type": "TIMESTAMP",
+                "Description": "Data e ora dell'elaborazione dell'ordine"
+            },
+            {
+                "Name": "datetimeshipped",
+                "Type": "TIMESTAMP",
+                "Description": "Data e ora della spedizione dell'ordine"
+            },
+            {
+                "Name": "articolodescrizione",
+                "Type": "VARCHAR(100)",
+                "Description": "Nome dell'articolo"
+            },
+            {
+                "Name": "articoloprincipioattivo",
+                "Type": "VARCHAR(100)",
+                "Description": "Principio attivo dell'articolo"
+            },
+            {
+                "Name": "articoloclasseterapeutica",
+                "Type": "VARCHAR(100)",
+                "Description": "Classe terapeutica dell'articolo"
+            },
+            {
+                "Name": "articoloforma",
+                "Type": "VARCHAR(50)",
+                "Description": "Forma farmaceutica dell'articolo"
+            },
+            {
+                "Name": "quantitarichiesta",
+                "Type": "INT",
+                "Description": "Quantità richiesta dell'articolo espresso in unità di misura"
+            },
+            {
+                "Name": "quantitavalidata",
+                "Type": "INT",
+                "Description": "Quantità validata dell'articolo espresso in unità di misura"
+            },
+            {
+                "Name": "quantitaconsegnata",
+                "Type": "INT",
+                "Description": "Quantità consegnata dell'articolo espresso in unità di misura"
+            }
+        ]
+    }
+}
